@@ -3,98 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silvana Lentati</title>
+    <title>Dr. Silvana Lentati</title>
     <style>
+        /* General Page Styling */
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-            text-align: center;
+            background-color: #f9f9f9;
         }
-        .profile {
+
+        /* Header Styling */
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Two-Column Layout Styling */
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap; /* Makes it responsive */
+            margin-bottom: 20px;
+        }
+
+        /* Left Column (Biography) */
+        .bio {
+            flex: 8; /* 80% width */
+            padding-right: 20px;
+        }
+
+        /* Right Column (Pictures) */
+        .images {
+            flex: 2; /* 20% width */
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 20px;
         }
-        .profile img {
+
+        .images img {
             border-radius: 50%;
-            width: 150px;
+            width: 150px; /* Adjust size for profile picture */
             height: 150px;
             margin-bottom: 10px;
         }
-        .profile h1 {
-            margin: 0;
+
+        .images .university-logo {
+            border-radius: 0; /* Logos are usually square or rectangular */
+            width: 100px; /* Adjust size for logo */
+            height: auto;
         }
-        .profile p {
-            text-align: center;
-            max-width: 600px;
-            margin: 10px auto;
-            font-size: 1.1em;
-            color: #555;
+
+        /* Single-Column Styling (After Two Columns) */
+        .content {
+            margin-top: 20px;
         }
-        .notes {
-            margin: 20px;
-        }
-        .notes h2 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        .notes ul {
-            list-style: none;
+
+        ul {
+            list-style-type: none;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
-        .notes ul li {
-            margin: 10px 0;
+
+        li {
+            margin: 5px 0;
         }
-        .notes ul li a {
-            color: #4CAF50;
+
+        a {
+            color: #007acc;
             text-decoration: none;
-            font-size: 1.2em;
         }
-        .notes ul li a:hover {
+
+        a:hover {
             text-decoration: underline;
         }
+
+        /* Footer */
         footer {
+            margin-top: 40px;
             text-align: center;
-            margin-top: 20px;
             font-size: 0.9em;
-            color: #888;
+            color: #555;
+        }
+        
+        /* Email style */
+        .email {
+            font-family: monospace; /* Keeps the coding font */
+            background-color: #f4f4f4; /* Light gray background */
+            border: 1px solid #ddd; /* Subtle border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 2px 5px; /* Adds some space around the text */
+            color: #333; /* Dark text for readability */
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Dr. Silvana Lentati</h1>
-        <p>Médica anatomopatóloga | Profesora universitaria</p>
-    </header>
+    <!-- Header -->
+    <h1>Dr. Silvana Lentati</h1>
 
-    <div class="profile">
-        <!--- <img src="profile.jpg" alt="Dr. [Your Mom's Name]'s Photo"> --->
-        <h1>Bienvenido</h1>
-        <p>
-            Mi nombre es Silvana Lentati y esta es mi <br> página web para compartir mis notas.
-        </p>
+    <!-- Two-Column Section -->
+    <div class="two-columns">
+        <!-- Left Column: Bio -->
+        <div class="bio">
+            <p>
+                Soy médica anatomopatóloga y jefa de trabajos prácticos en la 
+                <a href="https://med.unne.edu.ar/">Universidad Nacional del Nordeste</a>. 
+                Esta página web está dedicada a compartir apuntes que he escrito con
+                los años y otros recursos que me parezcan útiles para el desarrollo de las clases.
+            </p>
+            <h3>Educación</h3>
+            <ul>
+                <li>2009 – 2009: Especialización en patología mamaria, Instituto de Buenos Aires</li>
+                <li>2004 – 2009: Especialización en patología, Universidad Nacional del Nordeste</li>
+                <li>1999 – 2004: Médica cirujana, Universidad Nacional del Nordeste</li>
+            </ul>
+        </div>
+
+        <!-- Right Column: Images -->
+        <div class="images">
+            <img src="profile.jpg" alt="Dr. Silvana Lentati">
+            <img src="imagenes\logo_unne_med.png" alt="Universidad Nacional del Nordeste Logo" class="university-logo">
+        </div>
     </div>
 
-    <div class="notes">
-        <h2>Histología y Embriología</h2>
+    <!-- Single Column Section -->
+    <div class="content">
+        <h2>Apuntes de histología y embriología</h2>
         <ul>
             <li><a href="capitulos_notas\2-tejido-epitelial.pdf">Capítulo 2: Tejido epitelial</a></li>
             <li><a href="capitulos_notas\3-tejido-conectivo-conjuntivo.pdf">Capítulo 3: Tejido conectivo o conjuntivo</a></li>
             <li><a href="capitulos_notas\4-tejido-cartilaginoso.pdf">Capítulo 4: Tejido cartilaginoso</a></li>
         </ul>
+
+        <h2>Otros recursos</h2>
+        <ul>
+            <li>El rol de la inteligencia artificial en la patología (en inglés) – The Royal College of Pathologists <a href="https://www.youtube.com/watch?v=MasGPKmI28Y">(link)</a></li>
+            <li>Aprendizaje automático para la patología (en inglés) – MIT OpenCourseWare <a href="https://www.youtube.com/watch?v=PKCMH5KOcxQ">(link)</a></li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>
+            Si necesitás contactarme, mi correo es <span class="email">silvanalentati [arroba] gmail [punto] com</span>.
+        </p>
     </div>
 
+    <!-- Footer -->
     <footer>
         &copy; 2025 Dr. Silvana Lentati. Todos los derechos reservados.
     </footer>
